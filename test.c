@@ -1,9 +1,8 @@
-#include <stdio.h>
-
-void main() {
-	char name[30], raw;
-	printf("Enter your name: ");
-	
-	fgets(name,30,stdin);
-	printf("Hi %s \n", name);
+#include<stdio.h>
+int main(int argc, char const *argv[])
+{
+    int p, q=p+3;
+    printf("%d\n",&p);
+    printf("%d",&q);
+    return 0;
 }

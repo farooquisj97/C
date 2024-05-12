@@ -1,19 +1,18 @@
 #include<stdio.h>
 
-int power (int a, int b) {
-	int result=1;
-	for (int i=1; i<=b; i++){
-		result = result * a;
-	}
-	return result;
+int power(int x, int y)
+{
+    int power=1, i;
 
+    for(i=1; i<=y; i++)
+    power = power * x;
+
+    return power;
 }
 
-int main() {
-int a, b, result;
-printf("Enter number and power: \n");
-scanf("%d %d", &a, &b);
-result = power(a,b);
-printf("%d raised to power %d is %d\n", a, b, result);
-return 0;
+int main() 
+{
+    int a=10, b=5, c;
+    c = power(a,b);
+    printf("%d raised to the power %d is %d", a, b, c);
 }
