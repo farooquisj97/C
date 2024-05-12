@@ -1,0 +1,2 @@
+A floating point exception is an error that occurs when you try to do something impossible with a floating point number, such as divide by zero.
+
