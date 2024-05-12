@@ -1,31 +1,18 @@
-#include <stdio.h>
+#include<stdio.h>
 
-int factorial(int n) {
-	int i, fact = 1;
-	for (i=n; i>=1; i--){
-		fact = fact*i;
-	}
-	return fact;
+int main()
+{
+    int i,n,factorial=1;
+    printf("Enter a number\n");
+    scanf("%d\n", &n);
+
+    i = 1;
+    while (i<=n)  {
+        factorial = factorial*i;
+        i++;
+    }
+
+    printf("Factorial of %d is %d\n", n, factorial);
+    
+    return 0;
 }
-
-
-// using recursion
-int Factorial(int n){
-	int fact=1;
-	if (n==1)
-	fact = fact*1;
-	else
-	fact = n * Factorial(n-1);
-	return fact;
-}
-
-
-
-void main() {
-	int n;
-	printf("Enter number: ");
-	scanf("%d", &n);
-	printf("Factorial of %d is %d\n", n, factorial(n));
-	printf("Factorial of %d is %d\n", n, Factorial(n));
-}
-

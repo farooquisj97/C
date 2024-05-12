@@ -1,29 +1,19 @@
-#include <stdio.h>
+#include<stdio.h>
 
 int hcf (int n1, int n2) {
-	int q, res;
-	do {
-		q = n1/n2;
-		res = n1 - q*n2;
-		if (res==0)
-			break;
-		else {
-			n1 = n2;
-			n2 = res;	
-		}
-	} while (res!=0);
-	return n2;
+    int gcd;
+    gcd = n1/n2;
+    if (n2==0)
+    return n1;
+    hcf (n1, gcd);
 }
 
-void main() {
-	int n1, n2, res, q;
-	printf("enter two nos: \n");
-	scanf("%d %d", &n1, &n2);
-	res = hcf(n1,n2);
-	printf("Highest common factor is %d\n", res);
-}	
-
-
-
-
-
+int main(int argc, char const *argv[])
+{
+    int n1, n2, gcd;
+    printf("Enter two numbers: \n");
+    scanf("%d %d", &n1, &n2);
+    gcd = hcf(n1, n2);
+    printf("gcd = %d\n", gcd);
+    return 0;
+}
